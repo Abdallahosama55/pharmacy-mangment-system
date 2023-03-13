@@ -7,6 +7,9 @@ System requirments
 2-interface window 
 which have the summary of the system billing ,employes ,campanies
 
+![3](https://user-images.githubusercontent.com/82631323/224635567-d7f0b07f-8e28-4ec7-9106-fa404c9141f5.png)
+
+
 
 
 3-medcine page 
@@ -16,5 +19,5 @@ having name ,unit price ,profit ,quentity,, type,expdata
 ![6](https://user-images.githubusercontent.com/82631323/224634799-cd2fb69c-383f-46a4-892e-cd802a63ddcd.png)
 
 
+4- billing page 
 
-3-
