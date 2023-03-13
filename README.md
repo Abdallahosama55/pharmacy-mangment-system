@@ -8,4 +8,5 @@ System requirments
 
 2-medcine page 
 
-
+system have table medcine 
+having name ,unit price ,profit ,quentity,, type,expdata
