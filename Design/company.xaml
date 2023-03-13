@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="Design.company"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Design"
+        mc:Ignorable="d"
+       Height="750" Width="950" Background="white">
+   
+
+    <Grid>
+        <Grid.OpacityMask>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="White" Offset="1"/>
+                <GradientStop Color="#FFBAC2F6" Offset="0"/>
+                <GradientStop Color="#FF828ABD" Offset="0.181"/>
+                <GradientStop Color="#FF6E75A0" Offset="0.492"/>
+                <GradientStop Color="#FF5B6699" Offset="0.761"/>
+                <GradientStop Color="#FF27385B" Offset="0.991"/>
+            </LinearGradientBrush>
+        </Grid.OpacityMask>
+
+        <Grid.Background>
+            <ImageBrush/>
+        </Grid.Background>
+
+
+        <Label DockPanel.Dock="Top" Content="Companies" HorizontalAlignment="Left" Margin="48,43,0,0" VerticalAlignment="Top" FontFamily="Bodoni MT" FontSize="48" Foreground="CornflowerBlue" FontWeight="Bold"/>
+
+        <DockPanel Margin="0,0,36,10">
+
+            <Grid DockPanel.Dock="Left" Height="300" Width="392" HorizontalAlignment="Left" Margin="0,0,95,31">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Content="CompName" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Foreground="CornflowerBlue"  FontSize="20"/>
+                <Label Grid.Column="1" Content="CompPhone" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top" Foreground="CornflowerBlue" FontSize="20"/>
+                <Label Grid.Column="0" Content="CompAdress" HorizontalAlignment="Left" Margin="20,150,0,0" VerticalAlignment="Top" Foreground="CornflowerBlue" FontSize="20"/>
+                <TextBox  Name="NameTb" Grid.Column="0" HorizontalAlignment="Left" Margin="20,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
+                <TextBox Name="PhoneTb" Grid.Column="1" HorizontalAlignment="Left" Margin="20,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
+                <TextBox Name="AddressTb" Grid.Column="0" HorizontalAlignment="Left" Margin="20,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
+
+            </Grid>
+            <DataGrid  DockPanel.Dock="Right"  x:Name="CompanyGrid" Width="539" Height="596" SelectionChanged="RowSelected_datagrid" IsReadOnly="True" Margin="-102,3,0,0" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header = "ID" Binding = "{Binding Id}" />
+                    <DataGridTextColumn Header = "Name" Binding = "{Binding Name}" />
+                    <DataGridTextColumn Header = "Phone" Binding = "{Binding Phone}"/>
+                    <DataGridTextColumn Header = "Address" Binding = "{Binding Address}"/>
+
+                </DataGrid.Columns>
+
+            </DataGrid>
+
+
+            <Button Name="AddBtn" Foreground="white" Content="Add" DockPanel.Dock="Bottom" Height="30" Width="80" VerticalAlignment="Bottom" Margin="-441,20,20,125" FontSize="20" HorizontalAlignment="Left" Background="CornflowerBlue" BorderBrush="#FF628CC3"  Click="Add_btn"/>
+            <Button Name="UpdateBtn" Foreground="white" Content="Update" DockPanel.Dock="Bottom" Height="30" Width="80" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="-335,0,0,-50" FontSize="20" Background="CornflowerBlue" BorderBrush="#FF628CC3"  Click="Update_btn"/>
+            <Button Name="DeleteBtn" Foreground="white" Content="Delete" DockPanel.Dock="Bottom" Height="30" Width="80" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="-236,0,0,-50" FontSize="20" Background="CornflowerBlue"  BorderBrush="#FF628CC3" Click="Delete_btn"/>
+
+
+        </DockPanel>
+
+
+    </Grid>
+
+
+
+
+
+</UserControl>

@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="Design.report"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Design"
+        mc:Ignorable="d"
+       Height="650" Width="900"
+             Background="White"
+             
+             >
+
+
+    <UserControl.Resources>
+        <Style TargetType="Label">
+            <Style.Setters>
+                <Setter Property="FontSize" Value="15"></Setter>
+                <Setter Property="Foreground" Value="#628cc3"></Setter>
+            </Style.Setters>
+        </Style>
+
+        <Style x:Key="DEfaultButtonStyle">
+            <Style.Setters>
+                <Setter Property="Control.FontSize" Value="20"></Setter>
+                <Setter Property="Control.Foreground" Value="AliceBlue"></Setter>
+                <Setter Property="Control.Background" Value="CornflowerBlue"></Setter>
+                <Setter Property="FrameworkElement.Margin" Value="15 5"></Setter>
+                <Setter Property="Control.Padding" Value="5"></Setter>
+                <Setter Property="FrameworkElement.Width" Value="100"></Setter>
+            </Style.Setters>
+        </Style>
+
+        <Style TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="Background" Value="CornflowerBlue"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Height" Value="30"/>
+        </Style>
+
+
+    </UserControl.Resources>
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="750"/>
+            <ColumnDefinition Width="0"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Margin="0,0,0,324" Grid.Column="0">
+            <Label Foreground="CornflowerBlue" Margin="10,18,-10,375" HorizontalContentAlignment="Center"  FontSize="20" FontWeight="Bold"  Width="338">Show the Company Report</Label>
+            <ComboBox  Width="169" Height="24" x:Name="CompNametb" BorderBrush="Silver" HorizontalAlignment="Center" Margin="0,-504,0,205" SelectionChanged="CompNametb_SelectionChanged"  />
+
+        </StackPanel>
+        <StackPanel Margin="10,92,0,-216">
+            <DataGrid x:Name="MidGrid" Width="519" Height="440"  IsReadOnly="True" Margin="-4,24,0,0" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header = "Name-Medician" Binding = "{Binding Name}" Width="120" />
+                    <DataGridTextColumn Header = "Price" Binding = "{Binding UnitPrice}" Width="50" />
+                    <DataGridTextColumn Header = "Quantity" Binding = "{Binding quantity}" Width="80"/>
+                    <DataGridTextColumn Header = "PDate" Binding = "{Binding ProductionDate}" Width="60"/>
+                    <DataGridTextColumn Header = "ExpDate" Binding = "{Binding ExpDate}" Width="60"/>
+                    <DataGridTextColumn Header = "EnteredDate" Binding = "{Binding EnteredDate}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+
+
+        </StackPanel>
+
+
+
+
+    </Grid>
+
+
+</UserControl>

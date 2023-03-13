@@ -1,0 +1,91 @@
+﻿<Window x:Class="Design.Dashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Design"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Title="Dashboard" Background="White"  Width="1080" Height="720"
+        Name="window" Icon="dashboard.png"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
+
+    <Viewbox>
+        <WrapPanel Height="660" Width="1000">
+            <Border CornerRadius="20,20,20,20" Background="CornflowerBlue" Grid.RowSpan="2">
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="1" BlurRadius="20" Opacity="0.4"/>
+                </Border.Effect>
+
+                <Grid>
+                    <StackPanel Margin="0,0,0,-8">
+
+                        <Label HorizontalAlignment="Center" Foreground="White">Medicine</Label>
+
+                        <Button Style="{StaticResource menueButton}" BorderThickness="0" Click="Medicine_Click">
+                            <Image Source="syringe.png" Width="40"/>
+                        </Button>
+
+
+                        <Label HorizontalAlignment="Center" Foreground="White">Company</Label>
+                        <Button Style="{StaticResource menueButton}" BorderThickness="0" Click="company_click">
+                            <Image Source="office-building.png" Width="40"/>
+                        </Button>
+
+                        <Label HorizontalAlignment="Center" Foreground="White">Employee</Label>
+                        <Button Style="{StaticResource menueButton}" BorderThickness="0" Click="Employee_click">
+                            <Image Source="employees.png" Width="40"/>
+                        </Button>
+
+
+                        <Label HorizontalAlignment="Center" Foreground="White">Reports</Label>
+                        <Button Style="{StaticResource menueButton}" BorderThickness="0" Click="report_click">
+                            <Image Source="reportt.png" Width="40"/>
+                        </Button>
+
+
+
+                        <Label HorizontalAlignment="Center" Foreground="White">Return</Label>
+                        <Button Style="{StaticResource menueButton}" BorderThickness="0" Click="return_click">
+                            <Image Source="returnB.png" Width="40"/>
+                        </Button>
+
+
+                        <Label HorizontalAlignment="Center" Foreground="White">Bill</Label>
+                        <Button Style="{StaticResource menueButton}" BorderThickness="0" Click="bill_click">
+                            <Image Source="billl.png" Width="40"/>
+                        </Button>
+
+
+
+                        <Button Style="{StaticResource menueButton}" Margin="9,6,11,43" Background="Transparent" BorderThickness="0" Width="65" Height="58" Click="logout_click">
+                            <Image Source="exit.png" Width="40" Height="40" />
+                        </Button>
+
+
+                    </StackPanel>
+                </Grid>
+
+            </Border>
+            
+            <StackPanel HorizontalAlignment="Right" />
+            <WrapPanel/>
+
+
+            <StackPanel/>
+            <Frame x:Name="Controll" HorizontalAlignment="Left" Height="650" Width="900" Background="CornflowerBlue" RenderTransformOrigin="0.5,0.5" Margin="13,0,0,0" >
+                <Frame.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0"/>
+                    </TransformGroup>
+                </Frame.RenderTransform>
+
+            </Frame>
+
+        </WrapPanel>
+    </Viewbox>
+</Window>

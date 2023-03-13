@@ -1,0 +1,39 @@
+﻿<Window x:Class="Design.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Design"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Title="Login" Background="Black" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" Width="1080" Height="720" >
+    
+   
+    <Border BorderBrush="#628cc3" BorderThickness="2" >
+        <Viewbox>
+            <StackPanel  Width="1331" Background="black" Height="959" Margin="0,-2,0,0">
+                <StackPanel>
+                    <Image gif:ImageBehavior.RepeatBehavior="100x"
+                gif:ImageBehavior.AnimatedSource="login.gif" Height="345" />
+                </StackPanel>
+
+                <Label HorizontalContentAlignment="left" FontSize="25" Foreground="White" Width="240" Height="41">Username :</Label>
+                <TextBox Name="txt1" Width="250" FontSize="20"  Margin="20,10,10,9" HorizontalContentAlignment="left"   Height="41" TextChanged="TextBox_TextChanged"></TextBox>
+
+
+                <Label Foreground="White" FontSize="25" Width="242" Height="53">Password :</Label>
+                <PasswordBox Name="txt2" Width="250" FontSize="20"  Margin="20,10,10,9" Height="41"></PasswordBox>
+
+                <Button Content="login" Height="71" Width="216" Background="#FF2171DA" Foreground="White" FontWeight="Bold" FontSize="20" FontFamily="Georgia" Margin="0,56,0,0" Click="Button_Click">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="26"></Setter>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+            </StackPanel>
+        </Viewbox>
+    </Border>
+</Window>

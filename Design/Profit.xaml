@@ -1,0 +1,98 @@
+﻿<UserControl x:Class="Design.Profit"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Design"
+             mc:Ignorable="d" 
+       Height="650" Width="900"
+             Background="White">
+
+
+
+
+    <UserControl.Resources>
+        <Style TargetType="Label">
+            <Style.Setters>
+                <Setter Property="FontSize" Value="15"></Setter>
+                <Setter Property="Foreground" Value="#628cc3"></Setter>
+            </Style.Setters>
+        </Style>
+
+        <Style x:Key="DEfaultButtonStyle">
+            <Style.Setters>
+                <Setter Property="Control.FontSize" Value="20"></Setter>
+                <Setter Property="Control.Foreground" Value="AliceBlue"></Setter>
+                <Setter Property="Control.Background" Value="CornflowerBlue"></Setter>
+                <Setter Property="FrameworkElement.Margin" Value="15 5"></Setter>
+                <Setter Property="Control.Padding" Value="5"></Setter>
+                <Setter Property="FrameworkElement.Width" Value="100"></Setter>
+            </Style.Setters>
+        </Style>
+
+        <Style TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="Background" Value="CornflowerBlue"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Height" Value="30"/>
+        </Style>
+
+
+    </UserControl.Resources>
+    <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="500"/>
+            <ColumnDefinition Width="250"/>
+        </Grid.ColumnDefinitions>
+
+
+
+
+        <StackPanel Margin="10,0,-140,0" Grid.ColumnSpan="2">
+
+            <Label  FontSize="15" FontWeight="Bold" Foreground="CornflowerBlue" Width="282" Height="38" Content="Select Date To Know Budget" Margin="0,26,0,12"/>
+
+            <WrapPanel Margin="16,0,0,30" HorizontalAlignment="Left" Width="589">
+
+
+                <WrapPanel Margin="272,4,0,0" Width="273">
+                    <Label Margin="0,10,0,13" Foreground="CornflowerBlue" Content="SelectDate"/>
+
+                    <!--<DatePicker Width="151" Height="30"  x:Name="ShowDate"  >
+                        <DatePicker.BlackoutDates>
+                            <CalendarDateRange  End="2022-12-30" />
+
+                        </DatePicker.BlackoutDates>
+                    </DatePicker>-->
+                    <Calendar DisplayMode="Year" Name="ShowDate"/>
+
+                    <!--<DatePicker Width="244" Height="39"  Name="ShowDate" FontSize="25"  >
+                            <DatePicker.BlackoutDates>
+                                <CalendarDateRange  End="2022-12-30" />
+
+                            </DatePicker.BlackoutDates>
+                        </DatePicker>-->
+
+
+                </WrapPanel>
+            </WrapPanel>
+
+            <WrapPanel Margin="10" HorizontalAlignment="Center">
+                <Button Foreground="White" x:Name="ShowMonth" Style="{DynamicResource DEfaultButtonStyle}" Content="Show Month Profit" Click="Show_Click" BorderThickness="1,1,1,1" Width="190"/>
+                <Button Foreground="White" x:Name="Showday" Style="{DynamicResource DEfaultButtonStyle}" Content="Show Day Profit" BorderThickness="1,1,1,1" Click="Showday_Click" Width="170"/>
+                <Button Foreground="White" x:Name="Showyear" Style="{DynamicResource DEfaultButtonStyle}" Content="Show Year Profit" Click="Showyear_Click" BorderThickness="1,1,1,1" Margin="28,5,15,5" Width="170"/>
+            </WrapPanel>
+            <WrapPanel Height="178">
+                <Label Foreground="CornflowerBlue" Margin="30,53,30,0" Content="Total budget is"/>
+                <Label x:Name="Badgett" Width="150" Height="30" Foreground="Black" Margin="0,0,0,-50"/>
+
+
+            </WrapPanel>
+        </StackPanel>
+
+
+    </Grid>
+
+
+</UserControl>

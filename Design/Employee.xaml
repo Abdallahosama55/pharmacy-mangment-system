@@ -1,0 +1,86 @@
+﻿<UserControl x:Class="Design.Employee"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Design"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="900">
+
+
+    <UserControl.Resources>
+        <Style TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="Background" Value="CornflowerBlue"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Height" Value="30"/>
+        </Style>
+    </UserControl.Resources>
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <DockPanel Background="white" Margin="0,0,51,0">
+            <Label Grid.Column="0" FontSize="40" Foreground="CornflowerBlue" DockPanel.Dock="Top" Height="72" Width="222" Margin="-173,-8,0,0">Employee</Label>
+            <StackPanel Grid.Column="0" DockPanel.Dock="Left" Margin="10,0,0,0">
+                <StackPanel>
+                    <Label FontSize="20" Width="183" Margin="-83,7,0,-7" Foreground="CornflowerBlue">Email</Label>
+                    <TextBox x:Name="EmpEmail" BorderThickness="0,0,0,3" FontSize="18" Width="180" Background="Transparent" Margin="-42,-36,-105,0" RenderTransformOrigin="0.139,0.519"/>
+                </StackPanel>
+                <StackPanel Margin="0,20,0,0">
+                    <Label FontSize="20" Margin="-7,3,0,0" Foreground="CornflowerBlue">Name</Label>
+                    <TextBox x:Name="EmpName" BorderThickness="0,0,0,3" Width="180" FontSize="18" Margin="60,-37,0,13" Background="Transparent"></TextBox>
+                </StackPanel>
+                <StackPanel Margin="0,20,0,0">
+                    <Label FontSize="20" Width="73" Margin="-193,-11,0,0" Foreground="CornflowerBlue">Age</Label>
+                    <TextBox x:Name="EmpAge" BorderThickness="0,0,0,3" Width="180" FontSize="18" Margin="54,-41,0,9" Background="Transparent"></TextBox>
+                </StackPanel>
+                <StackPanel>
+                    <Label FontSize="20" Content="Salary" Margin="-5,10,0,0" Foreground="CornflowerBlue"/>
+                    <TextBox x:Name="EmpSalary" BorderThickness="0,0,0,3" Width="180"  Background="Transparent" FontSize="18" Margin="62,-38,0,13"/>
+                </StackPanel>
+                <StackPanel Margin="0,20,0,0">
+                    <TextBox x:Name="EmpPhone" BorderThickness="0,0,0,3" Width="180" Background="Transparent" FontSize="18" Margin="0,-12,-69,0"/>
+                    <Label FontSize="20" Margin="-174,-27,0,7" Content="Phone" Height="34" Width="98" Foreground="CornflowerBlue"/>
+                </StackPanel>
+                <StackPanel Margin="0,20,0,0">
+                    <Label FontSize="20" Margin="-183,-18,0,0" Content="Password" Width="95" Foreground="CornflowerBlue"/>
+                    <TextBox x:Name="EmpPassword" BorderThickness="0,0,0,3" Width="180"  Background="Transparent" FontSize="18" Margin="82,-39,0,13"></TextBox>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Grid.Column="0" Width="350" DockPanel.Dock="Right" Margin="0,0,0,0">
+
+
+
+                <StackPanel>
+                    <Label Name="updateLi"></Label>
+                </StackPanel>
+            </StackPanel>
+
+        </DockPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,63,0,0" HorizontalAlignment="Left" Width="362" >
+            <Button Margin="39,128,0,18" Height="40" Width="145" Grid.Column="0" Foreground="White" Background="CornflowerBlue" FontSize="30" Name="AddBtn" Click="AddBtn_Click_1">Add</Button>
+            <Button Margin="-148,281,0,0" Height="40" Width="145"  Grid.Column="0" Foreground="White"  Background="CornflowerBlue" FontSize="30" Name="updateBtn" Click="updateBtn_Click">Update</Button>
+            <Button Margin="-145,453,0,0" Height="40" Width="145" FontSize="30" Foreground="White"  Grid.Column="0" Background="CornflowerBlue" Name="DeleteBtn" Click="DeleteBtn_Click" VerticalAlignment="Center">Delete</Button>
+
+        </StackPanel>
+        <DataGrid Height="650"  Margin="271,0,0,0" Name="EmpGrid" VerticalAlignment="Center"  IsReadOnly="True" SelectionChanged="EmpGrid_SelectionChanged" Grid.ColumnSpan="2">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header = "Id"  Binding = "{Binding id}" Width="60" FontSize="15" />
+                <DataGridTextColumn Header = "Email"  Binding = "{Binding Email}" Width="150" FontSize="15" />
+                <DataGridTextColumn Header = "Name" Binding = "{Binding name}" Width="110" FontSize="15"/>
+                <DataGridTextColumn Header = "Salary" Binding = "{Binding salary}" Width="70" FontSize="15"/>
+                <DataGridTextColumn Header = "Age" Binding = "{Binding Age}" Width="70" FontSize="15"/>
+                <DataGridTextColumn Header = "Phone" Binding = "{Binding phone}" Width="80" FontSize="15"/>
+                <DataGridTextColumn Header = "Password" Binding = "{Binding password}" Width="80" FontSize="15"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</UserControl>

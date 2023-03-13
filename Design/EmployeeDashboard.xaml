@@ -1,0 +1,83 @@
+﻿<Window x:Class="Design.EmployeeDashboard"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Design"
+        mc:Ignorable="d"
+        Title="Dashboard"  
+        Name="window" Icon="dashboard.png"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        AllowsTransparency="True" Background="#ffffff" Width="1080" Height="720">
+
+
+    <Viewbox>
+
+        <WrapPanel Height="660" Width="1000" Margin="-7,0,-4,0">
+
+            <Border CornerRadius="30" Background="CornflowerBlue" Padding="0,2,0,0" Height="648" Margin="12,0,0,0">
+                <Border.Effect>
+                    <DropShadowEffect ShadowDepth="1" BlurRadius="20" Opacity="0.4"/>
+                </Border.Effect>
+
+                <Grid>
+                    <StackPanel Margin="0,7,0,-7">
+
+                        <Label HorizontalAlignment="Center" Foreground="White"/>
+
+                        <Button Style="{StaticResource menueButton}" BorderThickness="0" Margin="17,0,15,20"/>
+
+
+                        <Label HorizontalAlignment="Center" Foreground="White"/>
+                        <Button Style="{StaticResource menueButton}" BorderThickness="0" Margin="15,0,15,20"/>
+
+                        <Label HorizontalAlignment="Center" Foreground="White" Content="Bill"/>
+                        <Button Style="{StaticResource menueButton}" BorderThickness="0" Click="Bill_Click" Margin="15,2,15,34">
+                            <Image Source="billl.png" Width="40"/>
+                        </Button>
+
+
+                        <Label HorizontalAlignment="Center" Foreground="White" Content="Return-Bill"/>
+                        <Button Style="{StaticResource menueButton}" BorderThickness="0" Width="50" Height="50" Click="Return_Click">
+                            <Image Source="returnB.png" Width="45" Height="59"/>
+                        </Button>
+
+
+                        <!--<Label HorizontalAlignment="Center"   Foreground="White">Dashboard</Label>
+                        <Button Style="{StaticResource menueButton}" BorderThickness="0">
+                            <Image Source="dashboard.png" Width="40"/>
+                        </Button>-->
+
+                        <Button Style="{StaticResource menueButton}" Margin="9,173,11,43" Background="Transparent" BorderThickness="0" Width="60" Height="51" Click="Logout_Click">
+                            <Image Source="exit.png" Width="40" Height="40"  />
+                        </Button>
+
+
+                    </StackPanel>
+                </Grid>
+
+            </Border>
+
+            
+            <StackPanel HorizontalAlignment="Right" />
+            <WrapPanel/>
+
+
+            <StackPanel/>
+            <Frame x:Name="Controll" HorizontalAlignment="Center" Height="650" Width="900" Background="CornflowerBlue" RenderTransformOrigin="0.5,0.5" Margin="94,-648,0,0" BorderThickness="3" >
+                <Frame.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform AngleX="0"/>
+                        <RotateTransform/>
+                        <TranslateTransform X="0"/>
+                    </TransformGroup>
+                </Frame.RenderTransform>
+                   
+            </Frame>
+            <Label  Name="WelcomeMsg" FontSize="40" Foreground="white" Content="Hello" />
+        </WrapPanel>
+    </Viewbox>
+
+</Window>

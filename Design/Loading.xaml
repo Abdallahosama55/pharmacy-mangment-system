@@ -1,0 +1,19 @@
+﻿<Window x:Class="Design.Loading"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Design"
+        mc:Ignorable="d"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        Title="Loading"  Background="Black" Height="677"  Width="350">
+    <Viewbox Margin="0,0,-3,0">
+
+        <StackPanel Background="black" >
+            <Label  HorizontalContentAlignment="Center" Foreground="#FF2171DA" Height="28" Width="122">Loading...</Label>
+            <Image  gif:ImageBehavior.RepeatBehavior="100x"
+                gif:ImageBehavior.AnimatedSource="loading.gif" Height="71" Width="180" />
+            <StackPanel/>
+        </StackPanel>
+    </Viewbox>
+</Window>
