@@ -19,5 +19,7 @@ having name ,unit price ,profit ,quentity,, type,expdata
 ![6](https://user-images.githubusercontent.com/82631323/224634799-cd2fb69c-383f-46a4-892e-cd802a63ddcd.png)
 
 
-4- billing page 
+4- billing form 
+![5](https://user-images.githubusercontent.com/82631323/224637339-116048c9-fe42-4731-af5d-27c1fd0dffc0.png)
+
 
