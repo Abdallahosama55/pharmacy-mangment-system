@@ -20,6 +20,11 @@ having name ,unit price ,profit ,quentity,, type,expdata
 
 
 4- billing form 
+
+
+
 ![5](https://user-images.githubusercontent.com/82631323/224637339-116048c9-fe42-4731-af5d-27c1fd0dffc0.png)
+
+
 
 
